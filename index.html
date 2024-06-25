@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Votos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Formulario de votacion</h1>
+    <form id="votingForm">
+      <label for="name">Nombre y Apellido</label>
+      <input type="text" id="name" name="name" required minlength="8" />
+      <label for="alias">Alias</label>
+      <input type="text" id="alias" name="alias" required minlength="3" />
+      <label for="rut">RUT</label>
+      <input type="text" id="rut" name="rut" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="region">Region</label>
+      <select name="region" id="region" required>
+        <option value="">Seleccione una region</option>
+      </select>
+      <label for="comuna">Comuna</label>
+      <select name="comuna" id="comuna" required>
+        <option value="">Seleccione una comuna</option>
+      </select>
+      <label for="candidato">Candidato</label>
+      <select name="candidato" id="candidato" required>
+        <option value="">Seleccione un candidato</option>
+      </select>
+      <div class="checkbox-group">
+        <label for="how_heard">Como se enteró de nosotros</label>
+        <label
+          ><input
+            type="checkbox"
+            name="how_heard[]"
+            value="Web"
+            class="limited-checkbox"
+          />Web</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="how_heard[]"
+            value="TV"
+            class="limited-checkbox"
+          />TV</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="how_heard[]"
+            value="Redes sociales"
+            class="limited-checkbox"
+          />Redes sociales</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="how_heard[]"
+            value="Amigo"
+            class="limited-checkbox"
+          />Amigo</label
+        >
+      </div>
+      <button type="button" id="submitVote">Enviar Voto</button>
+    </form>
+    <div id="voteResult"></div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
