@@ -6,7 +6,7 @@ Instrucciones de Instalación:
 
 3. Si estas ocupando Xampp debes agregar la carpeta del proyecto en C:\xampp\htdocs\ (Si esta con la ruta de instalación por defecto)
 
-4. Importar el script votacion.sql de la carpeta SQL para tener la base de datos del proyecto
+4. Importar el script votacion.sql de la carpeta SQL para tener la base de datos del proyecto(Se agregaron 2 comunas por Region para no cargar tanto la vista de la web y la base de datos)
 
 5. Abre el archivo `db_connection.php` ubicado en la carpeta `php` y actualiza los valores de `$servername`, `$username`, `$password` y `$dbname` con la información de tu servidor de base de datos y la base de datos que tengas.
 
