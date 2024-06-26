@@ -50,6 +50,26 @@ $(document).ready(function () {
     },
   });
 
+  $("#rut").on("input", function () {
+    if (!validarRut($(this).val())) {
+      $("#rut").css("border-color", "red");
+      $("#rutError").text("El RUT ingresado no es válido.");
+    } else {
+      $("#rut").css("border-color", "green");
+      $("#rutError").text("");
+    }
+  });
+
+  $("#email").on("input", function () {
+    if (!validarEmail($(this).val())) {
+      $("#email").css("border-color", "red");
+      $("#emailError").text("El correo electrónico ingresado no es válido.");
+    } else {
+      $("#email").css("border-color", "green");
+      $("#emailError").text("");
+    }
+  });
+
   $("#submitVote").on("click", function () {
     var formData = $("#votingForm").serialize();
 
